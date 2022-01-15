@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> 
+          <%=product.name%>
+     </title>
+</head>
+<body>
+     <div>
+          <a href="/homepage">Homepage</a>
+     </div>
+     <br>
+     <br>
+     <img src= '<%=product.photoURL%>' height="300"  width="300">
+     <ul>
+          <li>
+               <%=product.name%>          
+          </li>
+          <li>
+               <%=product.age%>          
+          </li>
+          <li>
+               <%=product.phoneNo%>          
+          </li>
+          <li>
+               <%=product.description%>          
+          </li>
+     </ul>
+    
+     <% if( authToken ){ %>
+
+          <form action="/rentalBooking" method="post" >
+               <input type="datetime-local" name="girlDate" >
+               <select name="timeRange" id="timeRange">
+                    <option value="1">1 hour</option>
+                    <option value="2">2 hour</option>
+                    <option value="3">3 hour</option>
+                    <option value="4">4 hour</option>
+               </select>
+               <button type="submit" name='productID' value="<%=product._id%>">
+                    Rent
+               </button>
+          </form>
+     <% } %>
+</body>
+</html>

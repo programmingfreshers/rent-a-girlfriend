@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>cart</title>
+
+</head>
+<body>
+     <a href="/homepage">
+          homepage
+     </a>
+     <br><br>
+     <% if(productsList.lenght == 0){ %>
+          <h3>
+               No products Selected
+          </h3>
+     <% }else{ %>
+          <form action="/cartFunctions" method="post">
+               <% productsList.forEach((item)=>{ %>
+                    
+                    <div>
+                                 
+      
+                               
+                              <hr color="green">
+                              <%=item['name']%> 
+                              <button style="float:right; width: 100px; background-color: red;" type="submit" name="girlID" value="<%=item['id']%>" >
+                                   CANCEL
+                              </button>
+                              <hr color="green">
+                    </div>
+               <% }) %> 
+               
+          </form>
+               <div>Total Rent is : <%=totalRent%></div>
+          <form action="/checkout" method="post">
+               <button type="submit">
+                    Confirm Booking
+               </button>
+          </form>     
+     <% } %>
+
+</body>
+</html>

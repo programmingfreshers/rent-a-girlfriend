@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>update</title>
+</head>
+<body>
+     <form action="/update" method="post" autocomplete="off">
+          <input type="text" name="name" id="" placeholder="name" value="<%=product.name%>" >
+          <br>
+          <input type="text" name="age" id="" placeholder="age" value="<%=product.age%>">
+          <br>
+          <input type="text" name="phoneNo" id="" placeholder="phone No." value="<%=product.phoneNo%>" maxlength="10">
+          <br>
+          <input type="text" name="photoURL" id="" placeholder="photoURL" value="<%=product.photoURL%>">
+          <br>
+          <input type="text" name="description" id="" placeholder="description" value="<%=product.description%>">
+          <br>
+          <button type="submit" name='id' value='<%=product._id%>' >
+               <%=buttonTitle%>
+          </button>
+          <button type="submit" name='id' value='delete_profile'  >
+               Delete profile
+          </button>
+          <br><br>
+          <br>
+          <button type="submit" name='id' value='new_bookings'>
+               New bookings
+          </button>
+          <button type="submit" name='id' value='check_balance'>
+               Check balance
+          </button>
+          <!-- <button type="submit" name='id' value='schedule'>
+               Schedule
+          </button>
+          <button type="submit" name='id' value='all_records'>
+               All records
+          </button> -->
+     </form>
+     <br>
+     <form action="/endSession" method="post">
+          <button>
+               log out
+          </button>
+     </form>
+</body>
+</html>

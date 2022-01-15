@@ -1,0 +1,9 @@
+body{
+        background-color: coral;
+}
+.heading{
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title><%=pageTitle%></title>
+</head>
+<body>
+     <h2>
+          <%=pageTitle%>
+     </h2>
+     <hr color="red">
+     <a href="/homepage">
+          Homepage
+     </a>
+     <a href="/update">
+          Update
+     </a>
+     <div>
+          <h4>
+               Name : 
+               <%=pageData.customerName%>
+          </h4>
+          <h4> 
+               Date : 
+               <%=pageData.date%>
+          </h4>
+          <h4>
+               Rent :
+               <%=pageData.rent%>
+          </h4>
+     </div>
+</body>
+</html>
